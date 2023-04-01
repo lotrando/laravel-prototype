@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('alert', function () {
+
+    toast()->success('Sweetalert configured', 'Successfully')
+        ->position('top')
+        ->showCloseButton();
+
+    return view('welcome');
+});

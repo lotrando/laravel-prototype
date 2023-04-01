@@ -14,6 +14,7 @@
   <section>
     @yield('content')
   </section>
+  @include('sweetalert::alert')
 </body>
 
 </html>
