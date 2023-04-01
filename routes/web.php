@@ -17,10 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('alert', function () {
+Route::get('toast', function () {
 
     toast()->success('Sweetalert configured', 'Successfully')
         ->position('top')
+        ->showCloseButton();
+
+    return view('welcome');
+});
+
+Route::get('alert', function () {
+
+    alert()->success('Sweetalert configured', 'Successfully')
+        ->position('center')
         ->showCloseButton();
 
     return view('welcome');
